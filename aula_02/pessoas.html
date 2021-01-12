@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona</title>
+</head>
+<body>
+    <p id="status"></p>
+    <button onclick="verificarPessoa()">É casado ou não é?</button>
+    <script>
+        function verificarPessoa() {
+            let pessoa = {
+                nome: "Badauí",
+                idade: 44,
+                casado: false
+            }
+
+            let texto = document.querySelector("#status")
+
+            if (pessoa.casado === true) {
+                texto.innerText = "É casado"
+            } else {
+                texto.innerText = "É solteiro"
+            }
+        }
+    </script>
+</body>
+</html>
