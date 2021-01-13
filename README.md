@@ -21,3 +21,20 @@
 #### comparador de valor e tipo ( === )
 
 ### Exercício 01 proposto
+
+## Assuntos abordados na Aula 02
+
+### Funções
+
+### Estruturas de controle
+#### if
+#### else
+#### else if
+#### switch
+
+### Tags HTML
+
+### DOM
+
+### Evento
+#### onclick
