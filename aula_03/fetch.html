@@ -14,13 +14,10 @@
     <script>
 
         let array = []
+        let foto = document.querySelector("#foto")
+        let qtd = document.querySelector('#qtd')
 
         function mudarImagem() {
-
-            let foto = document.querySelector("#foto")
-            let qtd = document.querySelector('#qtd')
-
-            qtd.innerText = array.length + 1
 
             fetch("https://random.dog/woof.json")
                 .then(function(response) {
@@ -28,7 +25,7 @@
                     .then(function(data){
                         foto.src = data.url
                         array.push(data.url)
-                        console.log(array)
+                        qtd.innerText = array.length
                     })
                 })
         }
