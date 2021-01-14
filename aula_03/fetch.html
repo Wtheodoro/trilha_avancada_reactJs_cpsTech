@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Doggy</title>
+</head>
+<body>
+    <h1 id="qtd">Quantos dogs?</h1>
+
+    <button ondblclick="mudarImagem()">Foto de Dog</button>
+    <img id="foto"></img>
+    
+    <script>
+
+        let array = []
+
+        function mudarImagem() {
+
+            let foto = document.querySelector("#foto")
+            let qtd = document.querySelector('#qtd')
+
+            qtd.innerText = array.length + 1
+
+            fetch("https://random.dog/woof.json")
+                .then(function(response) {
+                    response.json()
+                    .then(function(data){
+                        foto.src = data.url
+                        array.push(data.url)
+                        console.log(array)
+                    })
+                })
+        }
+
+    </script>
+</body>
+</html>
