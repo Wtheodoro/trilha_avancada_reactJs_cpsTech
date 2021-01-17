@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <input class="text" type="text">
+    <div>
+        <button class="add">Adicionar</button>
+        <button class="delete">Remover</button>
+    </div>
+    <div>
+        <ul class="list"></ul>
+    </div>
+
+    <script>
+        const inputText = document.querySelector(".text")
+        const list = document.querySelector(".list")
+        const add = document.querySelector(".add")
+        const remove = document.querySelector(".delete")
+
+        let cont = 0
+        contador = () => cont++
+        let array = []
+        
+        window.addEventListener("DOMContentLoader", () => {
+            list.innerHTML = ''
+            list.innerHTML += 
+                    `
+                    <li>
+                        ${localStorage.getItem(indice)}
+                    </li>
+                    `
+        })
+
+        add.addEventListener("click", () => {
+            localStorage.setItem(cont, inputText.value)
+
+            list.innerHTML = ''
+
+            contador()
+            array.push(cont)
+
+            array.map(function (item, indice) {
+                list.innerHTML += 
+                    `
+                    <li>
+                        ${localStorage.getItem(indice)}
+                    </li>
+                    `
+            })
+
+            console.log(array)
+            
+        })
+
+        remove.addEventListener("click", () => {
+            localStorage.clear()
+            list.innerHTML = ''
+        })
+    </script>
+</body>
+</html>
