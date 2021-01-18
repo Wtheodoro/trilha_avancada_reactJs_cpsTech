@@ -14,8 +14,7 @@ class BancoLocal {
   }
   
   apagar() {
-    // let lista = this.minhaLista
     localStorage.clear()
-    this.minhaLista.innerHTML = ''
+    this.minhaLista = ''
   }
 }

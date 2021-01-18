@@ -8,7 +8,7 @@ class Lista {
 
   apagarLista() {
     localStorage.clear()
-    // lista.innerHTML = ''
+    this.lista.innerHTML = ''
   }
 
   adicionarNaLista(minhaLista) {
