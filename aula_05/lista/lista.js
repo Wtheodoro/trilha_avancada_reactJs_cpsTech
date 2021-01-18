@@ -7,7 +7,6 @@ class Lista {
   }
 
   apagarLista() {
-    localStorage.clear()
     this.lista.innerHTML = ''
   }
 
