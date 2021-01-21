@@ -2,7 +2,7 @@ function Item(props) {
     
     return (
         <>
-        {props.nome}<br/>
+        <p>{props.nome}</p>
         </>
     )
 }
