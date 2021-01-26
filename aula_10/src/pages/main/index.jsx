@@ -2,7 +2,7 @@ import MostraGIF from '../../components/MostraGIF'
 import Button from '../../components/Button'
 import { useState } from 'react'
 
-function Main(params) {
+function Main() {
 
     const [gif, setGif] = useState(false)
 
