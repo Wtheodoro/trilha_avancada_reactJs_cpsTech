@@ -1,5 +1,11 @@
 import React from 'react';
+
+import './styles/dark/DarkApp.css'
+import './styles/dark/DarkNeonButton.css'
+
 import AsideContainer from './components/Aside/AsideContainer';
+import Biography from './components/Biography';
+import ExpContainer from './components/Experience/ExpContainer';
 import Perfil from './components/Perfil';
 import Track from './components/Track';
 import { FakeAPI } from './types/fakeAPI';
@@ -59,14 +65,20 @@ function App() {
     ]
 }
 
-const { avatar, bio, contatos, educacao } = fakeAPI
+const { avatar, bio, contatos, educacao, nome, ocupacao, resumo, experiencia,  } = fakeAPI
+
+const bioInfo = [ nome, ocupacao, resumo ]
 
   return (
-    <>
-      <Perfil foto={avatar}/>
-      <Track biography={bio}/>
-      <AsideContainer infoContact={contatos} infoEdu={educacao}/>
-    </>
+    <main>
+      <>
+        <Perfil foto={avatar}/>
+        <Biography bio={bioInfo}/>
+        <Track biography={bio}/>
+        <AsideContainer infoContact={contatos} infoEdu={educacao}/>
+        <ExpContainer data={experiencia}/> 
+      </>
+    </main>
   );
 }
 
