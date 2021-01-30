@@ -4,7 +4,6 @@ import { UserType, PostType } from './types/UserType';
 
 function App() {
 
-  // const [user, setUser] = useState<any>()
   const [user, setUser] = useState<UserType[]>()
   const [id, setId] = useState<number>()
   const [post, setPost] = useState<PostType[]>()
