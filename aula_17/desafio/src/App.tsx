@@ -7,7 +7,7 @@ function App() {
   // const [user, setUser] = useState<any>()
   const [user, setUser] = useState<UserType[]>()
   const [id, setId] = useState<number>()
-  const [post, setPost] = useState<any>()
+  const [post, setPost] = useState<PostType[]>()
 
   useEffect(() =>{
     api.get(``)
