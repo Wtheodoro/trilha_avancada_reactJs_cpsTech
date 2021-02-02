@@ -1,8 +1,11 @@
 import axios from 'axios';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import '../src/styles/style.css'
 
 
 function App() {
+
+  const [status, setStatus] = useState<String>('')
 
   let inputName = useRef<HTMLInputElement>(null)
   let inputAge = useRef<HTMLInputElement>(null)
@@ -24,25 +27,28 @@ function App() {
       phone: phone,
       id: id
     })
+
+    .then(response => setStatus("Sujeito cadastrado com sucesso!"))
   }
 
 
   return (
-    <div className="App">
+    <div className="App box">
       <h2>Usuarios</h2>
       <div>
-      <input type="text" ref={inputName} placeholder="Nome"/>
+        <input type="text" ref={inputName} placeholder="Nome"/>
       </div>
       <div className="">
-      <input type="text" ref={inputAge} placeholder="Idade"/>
+        <input type="text" ref={inputAge} placeholder="Idade"/>
       </div>
       <div className="">
-      <input type="text" ref={inputCompany} placeholder="Empresa"/>
+        <input type="text" ref={inputCompany} placeholder="Empresa"/>
       </div>
       <div>
-      <input type="text" ref={inputPhone} placeholder="Celular"/>
+        <input type="text" ref={inputPhone} placeholder="Celular"/>
       </div>
-      <button onClick={postOnApi}>Enviar</button>
+      <button onClick={postOnApi} type="submit">Enviar</button>
+      <p>{status}</p>
     </div>
   );
 }
