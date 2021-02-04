@@ -18,7 +18,7 @@ function reducer(state = globalState, action: any) {
       }
     case 'DECREASE_AMOUNT':
       return {
-        amount: state.amount - 1
+        amount: state.amount > 0 ? state.amount -1 : state.amount
       }
     default:
       return state
