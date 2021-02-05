@@ -11,9 +11,7 @@ const Users = () => {
       .then(response => dispatch({ type: 'PULL_USERS', payload: response.data}))
   })
 
-  const name = useSelector((state:any) => state.users.name)
-  const username = useSelector((state:any) => state.users.username)
-  const email = useSelector((state:any) => state.users.email)
+  const { name, username, email } = useSelector((state: any) => state.users)
 
   return (
     <>
