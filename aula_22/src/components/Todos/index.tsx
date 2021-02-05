@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { apiTodos } from '../services/api'
+import api from '../../services/api'
 
 const Todos= () => {
 
   const dispatch = useDispatch()
-  const todos = useSelector((state: any) => state.todos)
+  const todos = useSelector((state: any) => state.todos.todos)
 
   useEffect(() => {
-    apiTodos.get('/todos')
+    api.get('/todos')
     .then(response => dispatch({ type: 'PULL_TODOS', payload: response.data }))
-      // .then(response => console.log(response))
   }, []) 
 
 
