@@ -1,9 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { Container } from './styles';
 
 const Info = () => {
   return (
+    <>
+    <Helmet>
+      <title>About me</title>
+      <meta name="aboutMe" content="About me" />
+    </Helmet>
     <Container>
       <div className="about-me">
         <h1>About me</h1>
@@ -11,6 +17,7 @@ const Info = () => {
         <p>I'm alsol a civil engenier, so if you want to build a house, i'm the guy '-', just kidding.</p>
       </div>
     </Container>
+    </>
   );
 };
 
