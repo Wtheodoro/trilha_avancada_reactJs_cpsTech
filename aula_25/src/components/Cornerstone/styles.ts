@@ -20,4 +20,8 @@ export const Container = styled.div`
     .each-icon {
         margin-top: 20px;
     }
+
+    svg {
+        font-size: 30px;
+    }
 `;

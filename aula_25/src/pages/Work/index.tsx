@@ -14,7 +14,7 @@ const Work = () => {
     <Container>
       <div className="text">
         <h2>My work</h2>
-        <p>I have'nt done mutch yet. But take a look on this!</p>
+        <p>I have'nt done mutch yet. But take a look at this!</p>
       </div>
       <div className="gif">
         <img src={gif} alt=""/>
