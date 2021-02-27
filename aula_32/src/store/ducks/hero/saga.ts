@@ -1,7 +1,6 @@
 import { put } from 'redux-saga/effects'
 import { call } from "typed-redux-saga";
 import { loadHeroFailure, loadHeroSuccess } from './actions'
-import { Hero } from './types'
 import HeroService from '../../../services/hero-service'
 
 export function* getHeroSaga(hero: any): any {

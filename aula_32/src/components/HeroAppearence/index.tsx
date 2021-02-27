@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import { AppearenceProps } from '../../store/ducks/hero/types';
 
 import { Container } from './styles';
@@ -8,9 +7,8 @@ const HeroAppearence = (props: AppearenceProps) => {
 
   return (
     <Container>
-      <h1>HeroAppearence</h1>
-          <h4>{props.name}</h4>
-          <img src={props.image} alt={props.name}/>
+      <h4>{props.name}</h4>
+      <img src={props.image} alt={props.name}/>
     </Container>
   );
 };

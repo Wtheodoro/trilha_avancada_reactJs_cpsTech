@@ -14,7 +14,7 @@ const HeroContainer = () => {
     <Container>
       {
         hero?.map((i: Hero) => (
-          <div>
+          <div key={i.id}>
           <HeroAppearence name={i.name} image={i.image.url}/>
           <HeroStats stats={i.powerstats}/>
           </div>

@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux'
 import { loadHeroRequest } from '../../store/ducks/hero/actions';
-import { getHeroSaga } from '../../store/ducks/hero/saga';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
+
 
 import { Container } from './styles';
 
@@ -17,8 +20,8 @@ const HeroSearch = () => {
   return (
     <Container>
       <h1>My Super!</h1>
-      <input type="text" ref={hero}/>
-      <button onClick={findHero}>Search</button>
+      <TextField id="outlined-basic" label="Super-Hero or Super-Villain" variant="outlined" inputRef={hero}/>
+      <Button color="primary" onClick={findHero}>Search</Button>
     </Container>
   );
 };

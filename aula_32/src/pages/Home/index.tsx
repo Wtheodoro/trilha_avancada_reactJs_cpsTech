@@ -1,8 +1,6 @@
 import React from 'react';
-import HeroAppearence from '../../components/HeroAppearence';
 import HeroContainer from '../../components/HeroContainer';
 import HeroSearch from '../../components/HeroSearch';
-import HeroStats from '../../components/HeroStats';
 
 import { Container } from './styles';
 
