@@ -4,10 +4,15 @@ import { useForm } from 'react-hook-form'
 import { Container } from './styles';
 
 const Form: React.FC = () => {
-  const { register, handleSubmit, errors} = useForm()
+
+  const { register, handleSubmit, errors, watch} = useForm()
+
+  const married = watch('estadoCivil')
+
   const submit = (data: any) => {
     console.log(data)
-  }
+  } 
+
   return (
     <Container>
       <h1>Incrição p/ doação de medula óssea</h1>
@@ -44,6 +49,17 @@ const Form: React.FC = () => {
         <FormControlLabel value="divorciade" control={<Radio />} label="Divorciade" inputRef={register({ required: true })}/>
         <FormControlLabel value="viuve" control={<Radio />} label="viúve" />
       </RadioGroup>
+      
+      {
+        married === 'casade' &&
+        <FormControl>
+          <InputLabel htmlFor='nomeConjuge'>Nome de conjuge</InputLabel>
+          <Input id="nameConjuge" type="text" aria-describedby="namec-helper" name="nomeConjuge" inputRef={register({ required: true})}/>
+          <FormHelperText id="nameConjuge-helper">Nome completo</FormHelperText>
+        </FormControl>
+      }
+      
+
       <Button variant="contained" color="primary" type="submit">
         Enviar
       </Button>
