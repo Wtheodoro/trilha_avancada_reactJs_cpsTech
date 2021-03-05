@@ -53,7 +53,7 @@ const Form: React.FC = () => {
       {
         married === 'casade' &&
         <FormControl>
-          <InputLabel htmlFor='nomeConjuge'>Nome de conjuge</InputLabel>
+          <InputLabel htmlFor='nomeConjuge'>Nome de cônjuge</InputLabel>
           <Input title="nomeConjuge" id="nameConjuge" type="text" aria-describedby="namec-helper" name="nomeConjuge" inputRef={register({ required: true})}/>
           <FormHelperText id="nameConjuge-helper">Nome completo</FormHelperText>
         </FormControl>

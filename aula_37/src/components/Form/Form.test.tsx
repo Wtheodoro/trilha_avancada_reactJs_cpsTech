@@ -23,24 +23,16 @@ describe('Form test', () => {
 
     it('input com conjuge', async () => {
         render(<Form />)
-        const formElement = screen.getByTitle("form")
-        const inputNome = screen.getByTitle("nome")
-        const inputCidade = screen.getByTitle("cidade")
-        const inputEmail = screen.getByTitle("email")
-        const inputIdade = screen.getByTitle("idade")
-        const inputRadio = screen.getByTitle("estadoCivil")
+        
         const inputCasade = screen.getByTitle("casade")
 
-        userEvent.type(inputNome, "Oliver Sykes")
-        userEvent.type(inputCidade, "Tokyo")
-        userEvent.type(inputEmail, "Sykes.oliver@BTMH.com")
-        userEvent.type(inputIdade, "34")
-        fireEvent.click(inputCasade)
+        userEvent.click(inputCasade)
 
         const inputNomeConjuge = await screen.findByTitle("nomeConjuge")
         userEvent.type(inputNomeConjuge, "Alissa Salls")
 
-        fireEvent.submit(formElement)
+        expect(inputCasade).toBeChecked()
+        expect(inputNomeConjuge).toHaveTextContent("Alissa Salls")
     })
 
 })
