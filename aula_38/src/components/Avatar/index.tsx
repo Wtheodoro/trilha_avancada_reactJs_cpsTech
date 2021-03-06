@@ -1,8 +1,9 @@
 import React from 'react';
+import { AvatarType } from '../../types/allTypes';
 
-const Avatar = () => {
+const Avatar = (props: AvatarType) => {
   return (
-      <img src="https://github.com/wtheodoro.png" alt="Avatar" data-testid="img"/>
+      <img src={props.url} alt="Avatar" data-testid="img"/>
   );
 };
 

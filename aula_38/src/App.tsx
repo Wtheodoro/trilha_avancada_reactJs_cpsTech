@@ -8,7 +8,7 @@ import Mensagem from './components/Mensagem';
 function App() {
   return (
     <div className="App">
-      <Avatar />
+      <Avatar url={"https://github.com/wtheodoro.png"}/>
       <Lista />
       <Button type={'concordo'}/>
       <Button type={'não concordo'}/>
