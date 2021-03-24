@@ -8,9 +8,9 @@ const Cornerstone = () => {
   return (
     <Container>
       <div className="icon">
-        <div className="each-icon"><Link to="/"><RiHome2Line /></Link></div>
-        <div className="each-icon"><Link to="/info"><RiContactsLine /></Link></div>
-        <div className="each-icon"><Link to="/work"><RiGithubLine /></Link></div>
+        <Link to="/"><RiHome2Line /></Link>
+        <Link to="/info"><RiContactsLine /></Link>
+        <Link to="/work"><RiGithubLine /></Link>
       </div>
     </Container>
   );

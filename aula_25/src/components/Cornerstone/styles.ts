@@ -17,11 +17,22 @@ export const Container = styled.div`
         justify-content: space-between;
     }
 
-    .each-icon {
-        margin-top: 20px;
+    svg {
+        font-size: 2rem;
+        background: #131313;
+        transition: all 0.3s;
+
+        &:hover {
+            font-size: 3rem;
+        }
     }
 
-    svg {
-        font-size: 30px;
+    a {
+        background: #131313;
+
+    }
+
+    a + a {
+        margin-top: 4rem;
     }
 `;
